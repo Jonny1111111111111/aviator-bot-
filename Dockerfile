@@ -1,13 +1,9 @@
-FROM python:3.12-slim
+FROM mcr.microsoft.com/playwright/python:v1.44.0-jammy
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    wget gnupg ca-certificates \
-    && pip install playwright==1.44.0 requests \
-    && playwright install chromium \
-    && playwright install-deps chromium \
-    && apt-get clean
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 COPY . .
 
