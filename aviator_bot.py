@@ -1,4 +1,4 @@
-“””
+
 Bet9ja Aviator Paper Trading Bot
 Strategy: Enter on streak 11+, 2.5x progression, cashout at 2x
 Paper trade only — no real bets placed
