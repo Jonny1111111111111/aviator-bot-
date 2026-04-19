@@ -6,8 +6,8 @@ from playwright.sync_api import sync_playwright
 import time, json, os, requests
 from datetime import datetime
 
-TELEGRAM_TOKEN = os.getenv(“TELEGRAM_TOKEN”, “”)
-TELEGRAM_CHAT  = os.getenv(“TELEGRAM_CHAT”, “”)
+TELEGRAM_TOKEN = os.getenv(TELEGRAM_TOKEN)
+TELEGRAM_CHAT  = os.getenv(TELEGRAM_CHAT)
 
 def tg(msg):
 if TELEGRAM_TOKEN and TELEGRAM_CHAT:
